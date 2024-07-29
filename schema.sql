@@ -3,7 +3,7 @@ CREATE TABLE LEAGUECHAMPS(
     Name VARCHAR(20),
     Tags VARCHAR(10),
     Role VARCHAR(20),
-    `Range type`VARCHAR(20),
+    `Range type` VARCHAR(20) CHECK ( `Range Type` = "Melee" OR `Range Type` = "Ranged"),
     `Resourse type` VARCHAR(20), 
     `Base HP` INT,
     `HP per lvl` INT,
@@ -26,3 +26,4 @@ CREATE TABLE LEAGUECHAMPS(
     `AS ratio` DOUBLE,
     PRIMARY KEY (Name)
 ) COMMENT '';
+
